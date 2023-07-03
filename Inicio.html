@@ -1,0 +1,242 @@
+<Doctype HTML> 
+    <html lang="en">
+        <head>
+            <LINK rel="stylesheet" type="text/css" href="Estilo css/Inicio.css">
+                <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+        </head>
+        <body>  
+
+ <!-- 
+            <div class = "main">
+                <div class = "opcion1">
+                    <div>Cocina Fantasma</div>
+                    <div> <img src="../Cocina Fantasma/Imagenes/Fantasma.png" width="30" height="30"> </div>
+                </div>
+
+                <div class = "opcion2">
+                    <div>Productos</div>
+                </div>
+
+                <div class = "opcion3">
+                    <div>Mapa de repartidores</div>
+                </div>
+
+                <div class = "opcion4">
+                    <div>Ayuda al cliente </div>
+                </div>
+
+                <div class = "opcion5">
+                    <div>Quienes somos</div>
+                </div>
+            </div>
+-->
+
+            <div class="main">
+                <ul class="opciones">
+                    <li class="btn-menu">
+                        <label for="btn-menu" class="icon-menu">
+                            <span class="material-symbols-outlined">
+                                menu
+                            </span>
+                        </label>
+                    </li>
+
+                    <li class="nombre">
+                        <a href="#">
+                            Cocina 
+                            <strong>
+                                Fantasma
+                            </strong>
+                            <img src="Imagenes/Inicio/cubiertos.png " alt="" width="50">
+                        </a>
+                    </li>
+
+                    <li class="ubicacion" onclick="location.href='#';" style="cursor: pointer;">
+                                Ubicacion
+                    </li>
+
+                    <li class="buscador">
+                        <input type="text" name= "hola" placeholder="Que desea comer?">
+
+                        <span class="material-symbols-outlined">
+                            search
+                        </span>
+                    </li>
+
+                    <li class="carrito"  onclick="location.href='#';" style="cursor: pointer;">
+                        <a href="#">
+                            <span class="material-symbols-outlined">
+                                shopping_cart
+                            </span>
+                            0 en el carro
+                        </a>
+                    </li>
+
+                    <li class="ruedita">
+                        <a href="">
+                            <span class="material-symbols-outlined" onclick="location.href='#';" style="cursor: pointer;">
+                                settings
+                            </span>
+                        
+                            <p>Opciones</p>
+                        </a>
+                    </li>
+                </ul>
+
+                <input type="checkbox" id="btn-menu">
+                <div class="container-menu">
+                    <div class="cont-menu">
+                        <nav>
+                            <div>
+                                <span class="material-symbols-outlined">
+                                    account_circle
+                                </span>
+                                <center>
+                                    Gandhi Soto
+                                </center>    
+                            </div>
+                            <a href="">Pedidos recientes</a>
+                            <a href="">Favoritos</a>
+                            <a href="">Metodos de pago</a>
+                            <a href="">Promociones</a>
+                            <a href="">Ayuda</a>
+                            <a href="">Invita a tus amigos</a>
+                            <a href="">Cerrar sesion</a>
+                            <ul class="redes-sociales">
+                                <li>
+                                    <a href="https://www.facebook.com/zobroas.sanchez">
+                                        <img src="Imagenes/Inicio/facebook.png" alt="" width="20">
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.instagram.com/">
+                                        <img src="Imagenes/Inicio/instagram.png" alt="" width="20">
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.whatsapp.com/?lang=es">
+                                        <img src="Imagenes/Inicio/whatsapp.png" alt="" width="20">
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="https://twitter.com/?lang=es">
+                                        <img src="Imagenes/Inicio/twitter.png" alt="" width="20">
+                                    </a>
+                                </li>
+
+                            </ul>
+                        <nav>
+                        <label for="btn-menu" class="icon-equis">
+                            <span class="material-symbols-outlined">
+                                close
+                            </span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+                    <!-- De aqui para abajo solo estara en la pagina inicio
+                    Lo que esta arriba, se repetira en las categorias-->
+            
+            <div class="main2">
+                <div class="categorias">
+                    <div onclick="location.href='Categorias/Comida mexicana.html';" style="cursor: pointer;">
+                        <img src="Imagenes/Inicio/Categorias/comida mexicana.png" alt="" width="70">
+                        <span class="cat1">Comida mexicana</span>
+                    </div>
+
+                    <div onclick="location.href='Categorias/Comida rapida.html';" style="cursor: pointer;">
+                        <img src="Imagenes/Inicio/Categorias/comida rapida.png" alt="" width="70">
+                        <span class="cat2">Comida rapida</span>
+                    </div>
+
+                    <div onclick="location.href='Categorias/Comida china.html';" style="cursor: pointer;">
+                        <img src="Imagenes/Inicio/Categorias/comida china.png" alt="" width="70">
+                        <span class="cat3">Comida china</span>
+                    </div>
+
+                    <div onclick="location.href='Categorias/Ensaladas.html';" style="cursor: pointer;">
+                        <img src="Imagenes/Inicio/Categorias/ensaladas.png" alt="" width="70">
+                        <span class="cat4">Ensaladas</span>
+                    </div>
+
+                    <div onclick="location.href='Categorias/Paquetes.html';" style="cursor: pointer;">
+                        <img src="Imagenes/Inicio/Categorias/paquetes.png" alt="" width="70">
+                        <span class="cat5">Paquetes</span>
+                    </div>
+
+                    <div onclick="location.href='Categorias/Bebidas.html';" style="cursor: pointer;">
+                        <img src="Imagenes/Inicio/Categorias/bebidas.png" alt="" width="70">
+                        <span class="cat6">Bebidas</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main3">
+                <div class="contenido">
+                    <div class="contenido1">
+                        <h2>Quienes somos?</h2>
+                        Le damos una gran importancia a las necesidades que puede tener el público en cuestiones de abastecerse de alimentos o la necesidad que tenga en algún evento que se esté llevando a cabo por la noche.
+                        La base principal que tenemos es el servicio y variedad de productos que le proporcionamos a nuestros clientes, por eso tratamos de ofrecer los mejores servicios y hacerte llegar tu pedido seguro hasta tu hogar, la pregunta no es quienes somos?, permitanos acompanarlo en sus noches traslargas, y, le aseguramos que la preguntara se respondera sola!
+                        Somos la mejor opcion que usted puede encontrar por las noches <br>
+                        Para un pedido seguro, Cocina <strong>Fantasma</strong> hasta la puerta de tu casa!
+                    </div>
+
+                    <div class="contenido2">
+                        <h2>Tiempo nocturno</h2>
+                        Nuestros servicios estan abiertos al publico a altas horas de la noche! (10pm - 7am) <br>
+                        No te dejaremos solo ante esas largas y pesadas noches que a veces tiene uno que estar despierto, aqui estaremos esperando listos para recibir tu orden
+                    </div>
+
+                    <div class="slider">
+                        <ul>
+                            <li><img src="Imagenes/Inicio/Slidder/imagen-slidder1.jpeg" alt="" ></li>
+                            <li><img src="Imagenes/Inicio/Slidder/imagen-slidder2.jpeg" alt=""></li>
+                            <li><img src="Imagenes/Inicio/Slidder/imagen-slidder3.jpeg" alt=""></li>
+                            <li><img src="Imagenes/Inicio/Slidder/imagen-slidder4.jpeg" alt=""></li>
+                        </ul>
+                        <h2>No te ha pasado que...?</h2>
+                        Se te hace de noche, todavia no has terminado el proyecto, estas a las prisas, lo menos que quieres pensar es en distraerte o perder el tiempo, en eso se escucha un rugido, no, no estabas alucinando por el sueno, era tu estomago implorando por tener algo dentro <br><br>
+
+                        A lo mejor sabes cocinar muy bien y rapido, pero quien sabe, quiza la persona que vive contigo no lo agredara la idea de escuchar ruido por la cocina <br><br>
+
+                        A lo mejor y estas de pereza, quien sabe?, una vez al anio no se danio <br>
+                        En Cocina Fantasma somos tu mejor opcion, estaremos orgullosos de poder acompaniarte en las buenas y en las malas!
+                    </div>
+                </div>
+            </div>
+
+            <div class="pie">
+                    <div>
+                        Cocina
+                        <strong>
+                            Fantasma
+                        </strong>
+                    </div>
+
+                    <div class="ayuda">
+                        Obten ayuda
+                    </div>
+
+                    <div class="acerca">
+                        Mas acerca de nosotros
+                    </div>
+
+                    <div class="sociales">Redes sociales</div>
+
+                    <div>Politica de privacidad</div>
+                    <div>Terminos</div>
+                    <div>Tarifas</div>
+                    <div>No vender informacion</div>
+                    <div class="empresa">©2022 Empresa Fantasma compania</div>
+            </div>
+
+
+        </body>
+    
+    
+    </html>
+    
