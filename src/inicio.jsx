@@ -124,7 +124,7 @@ export const Inicio = () => {
                         categorias.map((categoria, index) => (
                             <div
                                 key={categoria.nombre}
-                                onClick={() => navigate(`/${categoria.nombreDelComponente}`)  }
+                                onClick={() => navigate(`${categoria.nombreDelComponente}`)  }
                                 style={{cursor: 'pointer'}}
                             >
                                 <img src={`/Imagenes/Inicio/Categorias/${categoria.nombreDeLaImagen}`} alt={categoria.nombre} width="70"/>

@@ -1,20 +1,20 @@
 import {Inicio} from "./inicio.jsx";
-import {Route, Routes} from "react-router-dom";
+import {Navigate, Route, Routes} from "react-router-dom";
 import {Bebidas, ComidaChina, ComidaMexicana, ComidaRapida, Ensaladas, Paquetes} from "./Categorias/index.js";
 
 export const App = () => {
 
     return (
         <Routes>
-            <Route path="/" element={<Inicio/>}/>
-            <Route path='/Bebidas' element={ <Bebidas /> }/>
-            <Route path='/ComidaChina' element={ <ComidaChina /> }/>
-            <Route path='/ComidaMexicana' element={ <ComidaMexicana /> }/>
-            <Route path='/ComidaRapida' element={ <ComidaRapida /> }/>
-            <Route path='/Ensaladas' element={ <Ensaladas /> }/>
-            <Route path='/Paquetes' element={ <Paquetes /> }/>
+            <Route path="/dark-kitchen" element={<Inicio/>}/>
+            <Route path='dark-kitchen/Bebidas' element={ <Bebidas /> }/>
+            <Route path='dark-kitchen/ComidaChina' element={ <ComidaChina /> }/>
+            <Route path='dark-kitchen/ComidaMexicana' element={ <ComidaMexicana /> }/>
+            <Route path='dark-kitchen/ComidaRapida' element={ <ComidaRapida /> }/>
+            <Route path='dark-kitchen/Ensaladas' element={ <Ensaladas /> }/>
+            <Route path='dark-kitchen/Paquetes' element={ <Paquetes /> }/>
 
-            <Route path='*' element={ <Inicio /> }/>
+            <Route path='*' element={ <Navigate to="/dark-kitchen" /> }/>
         </Routes>
     )
 }
