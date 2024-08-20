@@ -1,6 +1,8 @@
 import '../Estilo css/Paquetes.css';
+import {useNavigate} from "react-router-dom";
 
 export const Paquetes = () => {
+    const navigate = useNavigate();
     return (
         <>
             <div className="main">
@@ -13,8 +15,8 @@ export const Paquetes = () => {
                         </label>
                     </li>
 
-                    <li className="nombre">
-                        <a href="../Inicio.html">
+                    <li className="nombre" onClick={() => navigate('/')}>
+                        <a href=''>
                             Cocina
                             <strong>
                                 Fantasma
@@ -25,7 +27,8 @@ export const Paquetes = () => {
 
                     <li
                         className="ubicacion"
-                        onClick={() => {}}
+                        onClick={() => {
+                        }}
                         style={{cursor: 'pointer'}}
                     >
                         Ubicacion
@@ -41,7 +44,8 @@ export const Paquetes = () => {
 
                     <li
                         className="carrito"
-                        onClick={() => {}}
+                        onClick={() => {
+                        }}
                         style={{cursor: 'pointer'}}
                     >
                         <a href="#">
@@ -56,7 +60,8 @@ export const Paquetes = () => {
                         <a href="">
                             <span
                                 className="material-symbols-outlined"
-                                onClick={() => {}}
+                                onClick={() => {
+                                }}
                                 style={{cursor: 'pointer'}}
                             >
                                 settings
@@ -69,7 +74,7 @@ export const Paquetes = () => {
 
                 <input type="checkbox" id="btn-menu"/>
                 <div className="container-menu">
-                    <div className="cont-menu">
+                <div className="cont-menu">
                         <nav>
                             <div>
                                 <span className="material-symbols-outlined">

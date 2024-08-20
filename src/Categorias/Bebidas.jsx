@@ -15,8 +15,8 @@ export const Bebidas = () => {
                         </label>
                     </li>
 
-                    <li className="nombre">
-                        <a onClick={() => navigate("/")}>
+                    <li className="nombre" onClick={() => navigate('/')}>
+                        <a href="">
                             Cocina
                             <strong>
                                 Fantasma

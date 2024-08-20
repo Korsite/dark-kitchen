@@ -1,6 +1,8 @@
 import '../Estilo css/Comida china.css'
+import {useNavigate} from "react-router-dom";
 
 export const ComidaChina = () => {
+    const navigate = useNavigate();
     return (
         <>
             <div className="main">
@@ -13,8 +15,8 @@ export const ComidaChina = () => {
                         </label>
                     </li>
 
-                    <li className="nombre">
-                        <a href="../Inicio.html">
+                    <li className="nombre" onClick={() => navigate('/')}>
+                        <a href=''>
                             Cocina
                             <strong>
                                 Fantasma
@@ -23,7 +25,8 @@ export const ComidaChina = () => {
                         </a>
                     </li>
 
-                    <li className="ubicacion" onClick={() => {}} style={{cursor: 'pointer'}}>
+                    <li className="ubicacion" onClick={() => {
+                    }} style={{cursor: 'pointer'}}>
                         Ubicacion
                     </li>
 
@@ -35,7 +38,8 @@ export const ComidaChina = () => {
                         </span>
                     </li>
 
-                    <li className="carrito"  onClick={() => {}} style={{cursor: 'pointer'}}>
+                    <li className="carrito" onClick={() => {
+                    }} style={{cursor: 'pointer'}}>
                         <a href="#">
                             <span className="material-symbols-outlined">
                                 shopping_cart
@@ -48,7 +52,8 @@ export const ComidaChina = () => {
                         <a href="">
                             <span
                                 className="material-symbols-outlined"
-                                onClick={() => {}}
+                                onClick={() => {
+                                }}
                                 style={{cursor: 'pointer'}}
                             >
                                 settings
@@ -61,7 +66,7 @@ export const ComidaChina = () => {
 
                 <input type="checkbox" id="btn-menu"/>
                 <div className="container-menu">
-                    <div className="cont-menu">
+                <div className="cont-menu">
                         <nav>
                             <div>
                                 <span className="material-symbols-outlined">

@@ -1,6 +1,8 @@
 import '../Estilo css/Comida mexicana.css';
+import {useNavigate} from "react-router-dom";
 
 export const ComidaMexicana = () => {
+    const navigate = useNavigate()
     return (
         <>
             <div className="main">
@@ -13,8 +15,8 @@ export const ComidaMexicana = () => {
                         </label>
                     </li>
 
-                    <li className="nombre">
-                        <a href="../Inicio.html">
+                    <li className="nombre" onClick={() => navigate('/')}>
+                        <a href=''>
                             Cocina
                             <strong>
                                 Fantasma

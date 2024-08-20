@@ -1,6 +1,8 @@
 import '../Estilo css/Ensaladas.css';
+import {useNavigate} from "react-router-dom";
 
 export const Ensaladas = () => {
+    const navigate = useNavigate();
     return (
         <>
             <div className="main">
@@ -13,8 +15,9 @@ export const Ensaladas = () => {
                         </label>
                     </li>
 
-                    <li className="nombre">
-                        <a href="../Inicio.html">
+
+                    <li className="nombre" onClick={() => navigate('/')}>
+                        <a href=''>
                             Cocina
                             <strong>
                                 Fantasma
@@ -25,7 +28,8 @@ export const Ensaladas = () => {
 
                     <li
                         className="ubicacion"
-                        onClick={() => {}}
+                        onClick={() => {
+                        }}
                         style={{cursor: 'pointer'}}
                     >
                         Ubicacion
@@ -41,7 +45,8 @@ export const Ensaladas = () => {
 
                     <li
                         className="carrito"
-                        onClick={() => {}}
+                        onClick={() => {
+                        }}
                         style={{cursor: 'pointer'}}
                     >
                         <a href="#">
@@ -56,7 +61,8 @@ export const Ensaladas = () => {
                         <a href="">
                             <span
                                 className="material-symbols-outlined"
-                                onClick={() => {}}
+                                onClick={() => {
+                                }}
                                 style={{cursor: 'pointer'}}
                             >
                                 settings
@@ -69,7 +75,7 @@ export const Ensaladas = () => {
 
                 <input type="checkbox" id="btn-menu"/>
                 <div className="container-menu">
-                    <div className="cont-menu">
+                <div className="cont-menu">
                         <nav>
                             <div>
                                 <span className="material-symbols-outlined">
@@ -146,7 +152,7 @@ export const Ensaladas = () => {
                     onClick={() => {}}
                     style={{cursor: 'pointer'}}
                 >
-                    <img src="../Imagenes/Productos/Ensaladas/ensalada mixta.png" alt=""/>
+                    <img src="/public/Imagenes/Productos/Ensaladas/ensalada%20mixta.png" alt=""/>
                     <span>
                         <h2>Ensalada mixta - $60</h2>
                         Deliciosas y variadas que incluye múltiples verduras, huevo y carnes.
