@@ -2,7 +2,6 @@ import {useNavigate} from "react-router-dom";
 import './Estilo css/Inicio.css'
 
 export const Inicio = () => {
-
     const navigate = useNavigate();
     return (
         <>
