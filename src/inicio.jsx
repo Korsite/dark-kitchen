@@ -80,30 +80,15 @@ export const Inicio = () => {
                             <a href="">Invita a tus amigos</a>
                             <a href="">Cerrar sesion</a>
                             <ul className="redes-sociales">
-                                <li>
-                                    <a href="https://www.facebook.com/zobroas.sanchez">
-                                        <img src="Imagenes/Inicio/facebook.png" alt="" width="20"/>
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="https://www.instagram.com/">
-                                        <img src="Imagenes/Inicio/instagram.png" alt="" width="20"/>
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="https://www.whatsapp.com/?lang=es">
-                                        <img src="Imagenes/Inicio/whatsapp.png" alt="" width="20"/>
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="https://twitter.com/?lang=es">
-                                        <img src="Imagenes/Inicio/twitter.png" alt="" width="20"/>
-                                    </a>
-                                </li>
-
+                                {
+                                    redesSociales.map(redSocial => (
+                                        <li key={redSocial.nombre}>
+                                            <a href={redSocial.url}>
+                                                <img src={`Imagenes/Inicio/${redSocial.imagen}`} alt="" width="20"/>
+                                            </a>
+                                        </li>
+                                    ))
+                                }
                             </ul>
                             <nav>
                                 <label htmlFor="btn-menu" className="icon-equis">
@@ -124,10 +109,11 @@ export const Inicio = () => {
                         categorias.map((categoria, index) => (
                             <div
                                 key={categoria.nombre}
-                                onClick={() => navigate(`${categoria.nombreDelComponente}`)  }
+                                onClick={() => navigate(`${categoria.nombreDelComponente}`)}
                                 style={{cursor: 'pointer'}}
                             >
-                                <img src={`/Imagenes/Inicio/Categorias/${categoria.nombreDeLaImagen}`} alt={categoria.nombre} width="70"/>
+                                <img src={`/Imagenes/Inicio/Categorias/${categoria.nombreDeLaImagen}`}
+                                     alt={categoria.nombre} width="70"/>
                                 <span className={`cat${index + 1}`}>{categoria.nombre}</span>
                             </div>
                         ))
@@ -159,10 +145,13 @@ export const Inicio = () => {
 
                     <div className="slider">
                         <ul>
-                            <li><img src="/Imagenes/Inicio/Slidder/imagen-slidder1.jpeg" alt=""/></li>
-                            <li><img src="/Imagenes/Inicio/Slidder/imagen-slidder2.jpeg" alt=""/></li>
-                            <li><img src="/Imagenes/Inicio/Slidder/imagen-slidder3.jpeg" alt=""/></li>
-                            <li><img src="/Imagenes/Inicio/Slidder/imagen-slidder4.jpeg" alt=""/></li>
+                            {
+                                [1,2,3,4].map((index) => (
+                                    <li key={index}>
+                                        <img src={`/Imagenes/Inicio/Slidder/imagen-slidder${index}.jpeg`} alt=""/>
+                                    </li>
+                                ))
+                            }
                         </ul>
                         <h2>No te ha pasado que...?</h2>
                         Se te hace de noche, todavia no has terminado el proyecto, estas a las prisas, lo menos que
@@ -210,6 +199,29 @@ export const Inicio = () => {
         </>
     )
 }
+
+const redesSociales = [
+    {
+        nombre: 'Facebook',
+        url: 'https://www.facebook.com/zobroas.sanchez',
+        imagen: 'facebook.png'
+    },
+    {
+        nombre: 'Instagram',
+        url: 'https://www.instagram.com/',
+        imagen: 'instagram.png'
+    },
+    {
+        nombre: 'Whatsapp',
+        url: 'https://www.whatsapp.com/?lang=es',
+        imagen: 'whatsapp.png'
+    },
+    {
+        nombre: 'Twitter',
+        url: 'https://twitter.com/?lang=es',
+        imagen: 'twitter.png'
+    }
+]
 
 
 const categorias = [
