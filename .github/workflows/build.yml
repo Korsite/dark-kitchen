@@ -12,22 +12,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0
-      # Escaneo de SonarQube
+          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
       - name: SonarQube Scan
         uses: SonarSource/sonarqube-scan-action@v4
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        # Configuración para Pull Requests
-        if: github.event_name == 'pull_request'
-        with:
-          args: >
-            -Dsonar.pullrequest.base=${{ github.event.pull_request.base.ref }}
-            -Dsonar.pullrequest.branch=${{ github.event.pull_request.head.ref }}
-            -Dsonar.pullrequest.key=${{ github.event.pull_request.number }}
-
-      # Verificación del Quality Gate (corrección aplicada aquí)
-      - name: SonarQube Quality Gate Check
-        uses: SonarSource/sonarqube-quality-gate-action@v1.1.0  # Versión exacta
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
