@@ -13,15 +13,21 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+      # Escaneo de SonarQube
       - name: SonarQube Scan
         uses: SonarSource/sonarqube-scan-action@v4
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          # Configuración adicional para Pull Requests
-          SONAR_PULL_REQUEST_BASE: ${{ github.base_ref }}
-          SONAR_PULL_REQUEST_BRANCH: ${{ github.head_ref }}
-          SONAR_PULL_REQUEST_KEY: ${{ github.event.pull_request.number }}
+        # Configuración para Pull Requests
+        if: github.event_name == 'pull_request'
+        with:
+          args: >
+            -Dsonar.pullrequest.base=${{ github.event.pull_request.base.ref }}
+            -Dsonar.pullrequest.branch=${{ github.event.pull_request.head.ref }}
+            -Dsonar.pullrequest.key=${{ github.event.pull_request.number }}
+
+      # Verificación del Quality Gate (corrección aplicada aquí)
       - name: SonarQube Quality Gate Check
-        uses: SonarSource/sonarqube-quality-gate-action@v2
+        uses: SonarSource/sonarqube-quality-gate-action@v1.1.0  # Versión exacta
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
