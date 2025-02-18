@@ -20,12 +20,6 @@ body{
     margin-top: 15px;
 }
 
-.opciones a{
-    color: black;
-    font-family: serif;
-    text-decoration: none;
-}
-
 .btn-menu{
     transform: translateX(-78%);
 }
@@ -63,12 +57,12 @@ body{
 #btn-menu:checked ~ .container-menu .cont-menu{
     transform: translateX(0%);
  }
- 
+
 .cont-menu nav{
     transform: translateY(15%);
 }
 
-.cont-menu nav a{
+.cont-menu nav button{
     display: block;
     text-decoration: none;
     padding: 20px;
@@ -77,7 +71,7 @@ body{
     transition: all 0.5s;
 }
 
-.cont-menu nav a:hover{
+.cont-menu nav button:hover{
     border-left: 5px solid #c7c7c7;
     background: #1f1f1f;
 }
@@ -93,7 +87,7 @@ body{
     font-size: 20px;
     transform: translateY(-40px);
     color: white;
-    
+
 }
 .cont-menu nav div center{
     transform: translateX(-10px);
@@ -173,14 +167,12 @@ body{
 
 .carrito:hover{
     background-color: white;
+    border: black solid 1px;
+
 }
 
 .carrito:hover span, .carrito:hover a{
     color:black;
-}
-
-.carrito:hover{
-    border: black solid 1px;
 }
 
 .ubicacion, .carrito, .buscador{
