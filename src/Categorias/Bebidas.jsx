@@ -1,129 +1,16 @@
 import '../Estilo css/Bebidas.css'
-import {useNavigate} from "react-router-dom";
+import {TopComponent} from "../components/TopComponent.jsx";
+import {SideBar} from "../components/SideBar.jsx";
 
 export const Bebidas = () => {
-    const navigate = useNavigate();
     return (
         <>
             <div className="main">
-                <ul className="opciones">
-                    <li className="btn-menu">
-                        <label htmlFor="btn-menu" className="icon-menu">
-                            <span className="material-symbols-outlined">
-                                menu
-                            </span>
-                        </label>
-                    </li>
-
-                    <li className="nombre" onClick={() => navigate('/')}>
-                        <a href="">
-                            Cocina
-                            <strong>
-                                Fantasma
-                            </strong>
-                            <img src="../Imagenes/Inicio/cubiertos.png" alt="" width="50"/>
-                        </a>
-                    </li>
-
-                    <li
-                        className="ubicacion"
-                        onClick={() => {
-                        }}
-                        style={{cursor: 'pointer'}}
-                    >
-                        Ubicacion
-                    </li>
-
-                    <li className="buscador">
-                        <input type="text" name="hola" placeholder="Que desea comer?"/>
-
-                        <span className="material-symbols-outlined">
-                            search
-                        </span>
-                    </li>
-
-                    <li
-                        className="carrito"
-                        onClick={() => {}}
-                        style={{cursor: 'pointer'}}
-                    >
-                        <a href="#">
-                            <span className="material-symbols-outlined">
-                                shopping_cart
-                            </span>
-                            0 en el carro
-                        </a>
-                    </li>
-
-                    <li className="ruedita">
-                        <a href="">
-                            <span
-                                className="material-symbols-outlined"
-                                onClick={() => {}}
-                                style={{cursor: 'pointer'}}
-
-                            >
-                                settings
-                            </span>
-
-                            <p>Opciones</p>
-                        </a>
-                    </li>
-                </ul>
+                <TopComponent/>
 
                 <input type="checkbox" id="btn-menu"/>
-                <div className="container-menu">
-                    <div className="cont-menu">
-                        <nav>
-                            <div>
-                                <span className="material-symbols-outlined">
-                                    account_circle
-                                </span>
-                                <center>
-                                    Gandhi Soto
-                                </center>
-                            </div>
-                            <a href="">Pedidos recientes</a>
-                            <a href="">Favoritos</a>
-                            <a href="">Metodos de pago</a>
-                            <a href="">Promociones</a>
-                            <a href="">Ayuda</a>
-                            <a href="">Invita a tus amigos</a>
-                            <a href="">Cerrar sesion</a>
-                            <ul className="redes-sociales">
-                                <li>
-                                    <a href="https://www.facebook.com/zobroas.sanchez">
-                                        <img src="../Imagenes/Inicio/facebook.png" alt="" width="20"/>
-                                    </a>
-                                </li>
 
-                                <li>
-                                    <a href="https://www.instagram.com/">
-                                        <img src="../Imagenes/Inicio/instagram.png" alt="" width="20"/>
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="https://www.whatsapp.com/?lang=es">
-                                        <img src="../Imagenes/Inicio/whatsapp.png" alt="" width="20"/>
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="https://twitter.com/?lang=es">
-                                        <img src="../Imagenes/Inicio/twitter.png" alt="" width="20"/>
-                                    </a>
-                                </li>
-
-                            </ul>
-                        </nav>
-                        <label htmlFor="btn-menu" className="icon-equis">
-                            <span className="material-symbols-outlined">
-                                close
-                            </span>
-                        </label>
-                    </div>
-                </div>
+                <SideBar/>
             </div>
 
             <div className="tema">
@@ -132,75 +19,62 @@ export const Bebidas = () => {
             </div>
 
             <div className="producto-paquetes">
-                <div
-                    onClick={() => {
-                    }}
-                    style={{cursor: 'pointer'}}
-                >
-                    <img src="/Imagenes/Productos/Bebidas/naranja.png" alt=""/>
-                    <span>
-                        <h2>Jugo de naranja - $25</h2>
-                        Mariscos, carne de res y bebidas preparadas c/s alcohol
-                    </span>
-                </div>
-
-                <div
-                    onClick={() => {
-                    }}
-                    style={{cursor: 'pointer'}}
-                >
-                    <img src="/Imagenes/Productos/Bebidas/frutos rojos.png" alt=""/>
-                    <span>
-                        <h2>Frutos rojos - $28</h2>
-                        Elaborados de una gran variedad de frutos como fresas, betabeles, manzanas y frambuesas
-                    </span>
-                </div>
-                <div
-                    onClick={() => {
-                    }}
-                    style={{cursor: 'pointer'}}
-                >
-                    <img src="../Imagenes/Productos/Bebidas/citricos.png" alt=""/>
-                    <span>
-                        <h2>Jugo de criticos - $28</h2>
-                        Hecho con naranja, toronja y limones frescos
-                    </span>
-                </div>
-
-                <div
-                    onClick={() => {
-                    }}
-                    style={{cursor: 'pointer'}}
-                >
-                    <img src="../Imagenes/Productos/Bebidas/betabel.png" alt=""/>
-                    <span>
-                        <h2>Jugo de betabel - $24</h2>
-                        Cervezas, boneless y carne asada
-                    </span>
-                </div>
-
-                <div
-                    onClick={() => {
-                    }}
-                    style={{cursor: 'pointer'}}
-                >
-                    <img src="../Imagenes/Productos/Bebidas/papaya y limon.png" alt=""/>
-                    <span>
-                        <h2>Papaya y limon - $26</h2>
-                        Fajitas de res y pollo, costillar de cerdo y salchicha polaca con guacamole
-                    </span>
-                </div>
-
-                <div
-                    onClick={() => {}}
-                    style={{cursor: 'pointer'}}
-                >
-                    <img src="../Imagenes/Productos/Bebidas/toronja.png" alt=""/>
-                    <span>
-                        <h2>Jugo de toronja = $25</h2>
-                    </span>
-                </div>
+                {
+                    productosBebidas.map((producto) => (
+                        <div
+                            key={producto.nombre}
+                            onClick={() => {
+                            }}
+                            style={{cursor: 'pointer'}}
+                        >
+                            <img src={producto.imagen} alt=""/>
+                            <span>
+                                <h2>{producto.nombre} - ${producto.precio}</h2>
+                                {producto.descripcion}
+                            </span>
+                        </div>
+                    ))
+                }
             </div>
         </>
     )
 }
+
+const productosBebidas = [
+    {
+        nombre: 'Jugo de naranja',
+        precio: 25,
+        descripcion: 'Mariscos, carne de res y bebidas preparadas c/s alcohol',
+        imagen: '/Imagenes/Productos/Bebidas/naranja.png'
+    },
+    {
+        nombre: 'Frutos rojos',
+        precio: 28,
+        descripcion: 'Elaborados de una gran variedad de frutos como fresas, betabeles, manzanas y frambuesas',
+        imagen: '/Imagenes/Productos/Bebidas/frutos rojos.png'
+    },
+    {
+        nombre: 'Jugo de criticos',
+        precio: 28,
+        descripcion: 'Hecho con naranja, toronja y limones frescos',
+        imagen: '/Imagenes/Productos/Bebidas/citricos.png'
+    },
+    {
+        nombre: 'Jugo de betabel',
+        precio: 24,
+        descripcion: 'Cervezas, boneless y carne asada',
+        imagen: '/Imagenes/Productos/Bebidas/betabel.png'
+    },
+    {
+        nombre: 'Papaya y limon',
+        precio: 26,
+        descripcion: 'Fajitas de res y pollo, costillar de cerdo y salchicha polaca con guacamole',
+        imagen: '/Imagenes/Productos/Bebidas/papaya y limon.png'
+    },
+    {
+        nombre: 'Jugo de toronja',
+        precio: 25,
+        descripcion: '',
+        imagen: '/Imagenes/Productos/Bebidas/toronja.png'
+    }
+]
