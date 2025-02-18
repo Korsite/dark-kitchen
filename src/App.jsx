@@ -3,6 +3,7 @@ import {Navigate, Route, Routes} from "react-router-dom";
 import {Bebidas, ComidaChina, ComidaMexicana, ComidaRapida, Ensaladas, Paquetes} from "./Categorias/index.js";
 
 export const App = () => {
+    This is a test
     return (
         <Routes>
             <Route path="/dark-kitchen" element={<Inicio/>}/>
