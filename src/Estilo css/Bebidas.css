@@ -167,14 +167,12 @@ body{
 
 .carrito:hover{
     background-color: white;
+    border: black solid 1px;
+
 }
 
 .carrito:hover span, .carrito:hover a{
     color:black;
-}
-
-.carrito:hover{
-    border: black solid 1px;
 }
 
 .ubicacion, .carrito, .buscador{
