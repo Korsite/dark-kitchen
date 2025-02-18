@@ -51,7 +51,7 @@ export const TopComponent = () => {
             <li className="carrito">
                 <button
                     onClick={() => {
-                        // Lógica para abrir el carrito
+                        // example
                     }}
                     onKeyDown={() => {
                         // Lógica para abrir el carrito
