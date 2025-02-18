@@ -173,15 +173,13 @@ body{
 
 .carrito:hover{
     background-color: white;
+    border: black solid 1px;
 }
 
 .carrito:hover span, .carrito:hover a{
     color:black;
 }
 
-.carrito:hover{
-    border: black solid 1px;
-}
 
 .ubicacion, .carrito, .buscador{
     border-radius: 20px;
@@ -310,8 +308,25 @@ body{
     grid-row-gap: 10px;
 }
 
-.contenido1{ grid-area: 1 / 1 / 2 / 2; }
-.contenido2{ grid-area: 2 / 1 / 3 / 2; }
+.contenido1{
+    grid-area: 1 / 1 / 2 / 2;
+    font-size: 20px;
+    height:450px;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 109px 10px 109px 10px;
+    -webkit-border-radius: 109px 10px 109px 10px;
+    -moz-border-radius: 109px 10px 109px 10px;
+}
+
+.contenido2{
+    grid-area: 2 / 1 / 3 / 2;
+    height: 175px;
+    font-size: 18px;
+    transform: translateY(-175%);
+    border-radius: 0px 109px 0px 109px;
+    -webkit-border-radius: 0px 109px 0px 109px;
+    -moz-border-radius: 0px 109px 0px 109px;
+}
 .contenido3{ grid-area: 1 / 2 / 3 / 3; }
 
 .contenido > div{
@@ -322,23 +337,6 @@ body{
 
 .contenido > div h2{
     margin:0;
-}
-
-.contenido1{
-    font-size: 20px;
-    height:450px;
-    font-family: 'Courier New', Courier, monospace;
-    border-radius: 109px 10px 109px 10px;
-    -webkit-border-radius: 109px 10px 109px 10px;
-    -moz-border-radius: 109px 10px 109px 10px;
-}
-.contenido2{
-    height: 175px;
-    font-size: 18px;
-    transform: translateY(-175%);
-    border-radius: 0px 109px 0px 109px;
-    -webkit-border-radius: 0px 109px 0px 109px;
-    -moz-border-radius: 0px 109px 0px 109px;
 }
 
 .contenido1, .contenido2{
