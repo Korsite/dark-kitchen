@@ -24,12 +24,20 @@ export const TopComponent = () => {
                 </button>
             </li>
 
-            <li
-                className="ubicacion"
-                onClick={() => {}}
-                style={{cursor: 'pointer'}}
-            >
-                Ubicacion
+            <li className="ubicacion">
+                <button
+                    onClick={() => { /* Lógica de ubicación */
+                    }}
+                    style={{
+                        background: 'none',
+                        border: 'none',
+                        cursor: 'pointer',
+                        padding: 0,
+                        fontSize: 'inherit' // Mantiene el tamaño de texto consistente
+                    }}
+                >
+                    Ubicacion
+                </button>
             </li>
 
             <li className="buscador">
@@ -40,24 +48,23 @@ export const TopComponent = () => {
                 </span>
             </li>
 
-            <li
-                className="carrito"
-                onClick={() => {
-                    // Lógica para abrir el carrito
-                }}
-                onKeyDown={() => { /* Lógica para abrir el carrito} */
-                }}
-                style={{cursor: 'pointer'}}
-            >
+            <li className="carrito">
                 <button
-                    style={{background: 'none', border: 'none', cursor: 'pointer', padding: 0}}
+                    onClick={() => {
+                        // Lógica para abrir el carrito
+                    }}
+                    onKeyDown={() => {
+                        // Lógica para abrir el carrito
+                    }}
+                    style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}
                 >
                     <span className="material-symbols-outlined">
                         shopping_cart
                     </span>
-                    0 en el carro
+                    {' '}0 en el carro
                 </button>
             </li>
+
 
             <li className="ruedita">
                 <button
