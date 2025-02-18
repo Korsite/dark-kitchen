@@ -1,5 +1,7 @@
 import {useNavigate} from "react-router-dom";
 import './Estilo css/Inicio.css'
+import {SideBar} from "./components/SideBar.jsx";
+import {TopComponent} from "./components/TopComponent.jsx";
 
 export const Inicio = () => {
     const navigate = useNavigate();
@@ -8,97 +10,11 @@ export const Inicio = () => {
             <body>
 
             <div className="main">
-                <ul className="opciones">
-                    <li className="btn-menu">
-                        <label htmlFor="btn-menu" className="icon-menu">
-                            <span className="material-symbols-outlined">
-                                menu
-                            </span>
-                        </label>
-                    </li>
-
-                    <li className="nombre">
-                        <a href="#">
-                            Cocina
-                            <strong>
-                                Fantasma
-                            </strong>
-                            <img src="Imagenes/Inicio/cubiertos.png" alt="" width="50"/>
-                        </a>
-                    </li>
-
-                    <li className="ubicacion">
-                        Ubicacion
-                    </li>
-
-                    <li className="buscador">
-                        <input type="text" name="hola" placeholder="Que desea comer?"/>
-
-                        <span className="material-symbols-outlined">
-                            search
-                        </span>
-                    </li>
-
-                    <li className="carrito">
-                        <a href="#">
-                            <span className="material-symbols-outlined">
-                                shopping_cart
-                            </span>
-                            0 en el carro
-                        </a>
-                    </li>
-
-                    <li className="ruedita">
-                        <a href="">
-                            <span className="material-symbols-outlined">
-                                settings
-                            </span>
-
-                            <p>Opciones</p>
-                        </a>
-                    </li>
-                </ul>
+                <TopComponent />
 
                 <input type="checkbox" id="btn-menu"/>
-                <div className="container-menu">
-                    <div className="cont-menu">
-                        <nav>
-                            <div>
-                                <span className="material-symbols-outlined">
-                                    account_circle
-                                </span>
-                                <center>
-                                    Gandhi Soto
-                                </center>
-                            </div>
-                            <a href="">Pedidos recientes</a>
-                            <a href="">Favoritos</a>
-                            <a href="">Metodos de pago</a>
-                            <a href="">Promociones</a>
-                            <a href="">Ayuda</a>
-                            <a href="">Invita a tus amigos</a>
-                            <a href="">Cerrar sesion</a>
-                            <ul className="redes-sociales">
-                                {
-                                    redesSociales.map(redSocial => (
-                                        <li key={redSocial.nombre}>
-                                            <a href={redSocial.url}>
-                                                <img src={`Imagenes/Inicio/${redSocial.imagen}`} alt="" width="20"/>
-                                            </a>
-                                        </li>
-                                    ))
-                                }
-                            </ul>
-                            <nav>
-                                <label htmlFor="btn-menu" className="icon-equis">
-                                    <span className="material-symbols-outlined">
-                                        close
-                                    </span>
-                                </label>
-                            </nav>
-                        </nav>
-                    </div>
-                </div>
+
+                <SideBar />
             </div>
 
 
@@ -198,30 +114,6 @@ export const Inicio = () => {
         </>
     )
 }
-
-const redesSociales = [
-    {
-        nombre: 'Facebook',
-        url: 'https://www.facebook.com/zobroas.sanchez',
-        imagen: 'facebook.png'
-    },
-    {
-        nombre: 'Instagram',
-        url: 'https://www.instagram.com/',
-        imagen: 'instagram.png'
-    },
-    {
-        nombre: 'Whatsapp',
-        url: 'https://www.whatsapp.com/?lang=es',
-        imagen: 'whatsapp.png'
-    },
-    {
-        nombre: 'Twitter',
-        url: 'https://twitter.com/?lang=es',
-        imagen: 'twitter.png'
-    }
-]
-
 
 const categorias = [
     {
